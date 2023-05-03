@@ -26,7 +26,7 @@ siconc = data1[:,0]
 #%%
 
 # define the grid onto which we want to interpolate the data
-xi, yi = np.meshgrid(np.linspace(0, 360, 1000), np.linspace(-90, 90, 1000))
+xi, yi = np.meshgrid(np.linspace(0, 360, 1000), np.linspace(-90, -40, 1000))
 
 
 # interpolate the data onto the grid

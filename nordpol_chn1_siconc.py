@@ -16,17 +16,17 @@ with open('C:/Users/cfmcf/OneDrive/4. DTU/4. semester/Fagprojekt/Siconc1nhvermaa
 data = sum(ds,[])
 
 data = np.array(data)
-
+data1 = np.array(ds[7])
 
 # extract data
-lons = data[:,3]
-lats = data[:,2]
-siconc = data[:,0]
+lons = data1[:,3]
+lats = data1[:,2]
+siconc = data1[:,0]
 
 #%%
 
 # define the grid onto which we want to interpolate the data
-xi, yi = np.meshgrid(np.linspace(0, 360, 1000), np.linspace(-90, 90, 1000))
+xi, yi = np.meshgrid(np.linspace(0, 360, 1000), np.linspace(40, 90, 1000))
 
 
 # interpolate the data onto the grid
