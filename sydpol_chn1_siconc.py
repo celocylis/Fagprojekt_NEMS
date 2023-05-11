@@ -4,6 +4,7 @@ import numpy as np
 import scipy
 from scipy.interpolate import griddata
 import pickle
+from matplotlib.colors import ListedColormap, LinearSegmentedColormap
 
 # load data:
 #ds = xr.open_dataset('C:/Users/cfmcf/OneDrive/4. DTU/4. semester/Fagprojekt/NEMS_colocated/Nimbus5-NEMS_L2_1973m0622t063825_DR26_era5.nc')
@@ -22,6 +23,31 @@ data1 = np.array(ds[7])
 lons = data1[:,3]
 lats = data1[:,2]
 siconc = data1[:,0]
+
+#%%
+# create colormap
+list_colors = [(0,0,1),
+               (0,1,0),
+               (0,1,0),
+               (0,1,0),
+               (0,1,0),
+               (0,1,0),
+               (0,1,0),
+               (0,1,0),
+               (0,1,0),
+               (0,1,0),
+               (0,1,0),
+               (0,1,0),
+               (0,1,0),
+               (0,1,0),
+               (0,1,0),
+               (0,1,0),
+               (0,1,0),
+               (0,1,0),
+               (1,0,0),
+               (1,0,0)]
+
+my_cmap = LinearSegmentedColormap.from_list('my_list', list_colors,N=20)
 
 #%%
 
@@ -48,9 +74,10 @@ ax.set_extent([0, 360, -90, -60], ccrs.PlateCarree())
 
 ax.coastlines()
 
-plt.pcolormesh(xi, yi, zi, transform=ccrs.PlateCarree(), cmap='jet')
+plt.pcolormesh(xi, yi, zi, transform=ccrs.PlateCarree(), cmap=my_cmap)
 plt.colorbar()
 plt.clim(0,1)
+
 
 plt.show()
 
