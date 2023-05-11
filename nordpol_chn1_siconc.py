@@ -4,6 +4,7 @@ import numpy as np
 import scipy
 from scipy.interpolate import griddata
 import pickle
+from matplotlib.colors import ListedColormap, LinearSegmentedColormap
 
 # load data:
 #ds = xr.open_dataset('C:/Users/cfmcf/OneDrive/4. DTU/4. semester/Fagprojekt/NEMS_colocated/Nimbus5-NEMS_L2_1973m0622t063825_DR26_era5.nc')
