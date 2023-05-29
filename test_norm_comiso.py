@@ -19,6 +19,7 @@ with open('C:/Users/cfmcf/OneDrive/4. DTU/4. semester/Fagprojekt/testnormalizedf
 data = np.array(ds,dtype = np.dtype('float'))
 
 
+
 # extract data
 lons = data[:,2]
 lats = data[:,1]
