@@ -17,12 +17,11 @@ with open('C:/Users/cfmcf/OneDrive/4. DTU/4. semester/Fagprojekt/Siconc2nhvermaa
 data = sum(ds,[])
 
 data = np.array(data)
-data1 = np.array(ds[0])
 
 # extract data
-lons = data1[:,3]
-lats = data1[:,2]
-siconc = data1[:,0]
+lons = data[:,3]
+lats = data[:,2]
+siconc = data[:,0]
 
 #%%
 # create colormap
