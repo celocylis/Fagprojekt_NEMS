@@ -14,6 +14,7 @@ with open('C:/Users/cfmcf/OneDrive/4. DTU/4. semester/Fagprojekt/Siconc2shvermaa
     ds = pickle.load(f)
 
 
+    
 data = sum(ds,[])
 
 data = np.array(data)
